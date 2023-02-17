@@ -237,6 +237,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
+  popper_js
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.1)
   sass-rails (>= 6)

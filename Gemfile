@@ -14,6 +14,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bootstrap"
 gem "jquery-rails"
+gem "popper_js"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
