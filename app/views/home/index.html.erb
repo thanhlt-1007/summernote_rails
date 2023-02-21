@@ -1,3 +1,39 @@
 <h1>Home#index</h1>
 
-<div id="summernote">Hello Summernote</div>
+<div id="summernote">
+  <p>Hello Summernote</p>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#summernote').summernote({
+      popover: {
+        image: [
+          ['custom', ['imageAttributes']],
+          ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+          ['float', ['floatLeft', 'floatRight', 'floatNone']],
+          ['remove', ['removeMedia']]
+        ],
+      },
+      lang: 'ja-JP', // Change to your chosen language
+      imageAttributes:{
+        icon:'<i class="note-icon-pencil"/>',
+        removeEmpty:false, // true = remove attributes | false = leave empty if present
+        disableUpload: false // true = don't display Upload Options | Display Upload Options
+      }
+    });
+
+    $('.note-imageAttributes-btn').attr('disabled', 'disabled');
+
+    $('.note-imageAttributes-link-href').on('input', function() {
+      var href = $(this).val();
+      var url;
+      try {
+        url = new URL(href);
+        $('.note-imageAttributes-btn').removeAttr('disabled');
+      } catch (_) {
+        $('.note-imageAttributes-btn').attr('disabled', 'disabled');
+      }
+    });
+  });
+</script>

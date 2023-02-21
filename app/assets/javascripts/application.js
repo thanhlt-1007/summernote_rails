@@ -1,9 +1,2 @@
-//= require popper
-//= require bootstrap
-//= require jquery
-
-//= require summernote/summernote-bs5
-
-$(document).ready(function() {
-  $("#summernote").summernote();
-});
+//= require summernote/summernote-image-attributes.min.js
+//= require summernote/lang/ja-JP.js
